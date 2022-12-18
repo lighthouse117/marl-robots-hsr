@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="robot_name" default="$(optenv ROBOT_NAME hsrb)" />
+  <include file="$(find hsrb_gazebo_bringup)/launch/hsrb_empty_world.launch" pass_all_args="true" >
+    <arg name="world_name" value="/home/irsl/gazebo_worlds/diamond.world" />
+    <arg name="robot_pos" value="-x 2 -y 0.3 -z 0 -Y 1.57" />
+    <arg name="use_laser_odom" value="false" />
+  </include>
+</launch>
